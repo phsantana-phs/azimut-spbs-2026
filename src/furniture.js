@@ -8,7 +8,7 @@ export function furniture(root,m){const upper=group('Mobiliário Main Deck — e
 for(const [x,y,z]of L.tables){box([x,y+.013,z],[3.4,.026,3.4],m.rug,upper);if(x!==21.7)table(x,y,z,m,upper);cylinder([x+.7,y+.19,z+.65],.34,.38,m.fabric,upper);chair(x,y,z-1.3,m,upper);}
 sofa(14.2,2.7,9.6,m,upper);sofa(17.1,2.7,9.6,m,upper,Math.PI);sofa(14.6,2.7,17.6,m,upper);sofa(23.3,2.7,17.8,m,upper,Math.PI);
 ring(18.2,13.4,1.85,1.55,.42,2.7,.94,m.wood,upper,.17,Math.PI*2-.17);ring(18.2,13.4,1.94,1.64,.59,3.64,.085,m.stone,upper,.17,Math.PI*2-.17);
-for(let i=0;i<90;i++){let a=.17+i/89*(Math.PI*2-.34);cylinder([18.2+1.86*Math.cos(a),3.17,13.4+1.56*Math.sin(a)],.025,.9,m.teak,upper);}
+for(let i=0;i<90;i++){let a=.17+i/89*(Math.PI*2-.34);cylinder([18.2+1.86*Math.cos(a),3.17,13.4+1.56*Math.sin(a)],.025,.9,m.wood,upper);}
 ring(22.5,8.6,1.3,1,.4,2.7,.9,m.wood,upper,.65,5.65);ring(22.5,8.6,1.4,1.1,.53,3.6,.08,m.stone,upper,.65,5.65);
 for(const [x,z,w,d]of L.lowerObjects){box([x,.74,z],[w,.09,d],m.stone,lower);cylinder([x,.35,z],.18,.7,m.dark,lower);chair(x,z===9?.0:0,z-d/2-.4,m,lower);chair(x,0,z+d/2+.4,m,lower,Math.PI);}
 for(const x of [17.3,18.7]){chair(x,0,11.9,m,lower);chair(x,0,14.1,m,lower,Math.PI);}

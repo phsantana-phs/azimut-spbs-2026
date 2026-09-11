@@ -1,10 +1,12 @@
 {
-  "date": "2026-09-11T13:55:09.504Z",
+  "date": "2026-09-11T14:50:24.462Z",
   "browser": "Chromium / Playwright, software WebGL, offline file://",
   "checks": [
     "HTML via file:// com rede offline",
     "GLB Chisel importado",
+    "Iluminação Render 3000 K inicial",
     "Órbita por mouse",
+    "Vista materials",
     "Vista arrival",
     "Vista piazza",
     "Vista mockup",
@@ -20,6 +22,8 @@
     "Fim de tarde",
     "Captura PNG 2560 px",
     "Exportação GLB completa",
+    "Mapas normais preservados no GLB",
+    "Rugosidade preservada no GLB",
     "Painel de referências aberto",
     "Matriz de confiança",
     "34 páginas incorporadas",
@@ -37,8 +41,8 @@
   ],
   "errors": [],
   "remote": [],
-  "fullGLBBytes": 16326604,
-  "cutGLBBytes": 11256816,
+  "fullGLBBytes": 21926564,
+  "cutGLBBytes": 16339700,
   "png": [
     2560,
     1707
@@ -47,20 +51,20 @@
     "ready": true,
     "walking": false,
     "camera": [
-      3.665156693380482,
-      1.8942430604017104,
-      21.16158405029908
+      3.615111834218771,
+      1.8942430604017102,
+      21.29443040371017
     ],
     "feet": [
-      3.6654342880778263,
+      3.6153894289161155,
       0,
-      21.16084716255704
+      21.29369351596813
     ],
     "view": "arrival",
     "cut": false,
     "assetLoaded": true,
     "assetChildren": 1,
-    "drawCalls": 36,
+    "drawCalls": 35,
     "triangles": 143254,
     "visibleModelChildren": 8
   }

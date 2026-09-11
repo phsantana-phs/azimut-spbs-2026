@@ -1,0 +1,20 @@
+{
+  "id": "materials-render-02",
+  "reference": "Imagem codex-clipboard-5b3c57a0-699c-4883-8fc2-8c38757d0e85.png fornecida na conversa; consultada localmente, não publicada",
+  "beforeCommit": "b683008",
+  "after": "Materiais PBR de cor, normal e rugosidade; UVs em escala visual; modo Render 3000 K",
+  "geometryChanged": false,
+  "parameters": {
+    "mapResolution": [512, 512],
+    "proceduralSurfaceCount": 7,
+    "renderEnvironmentIntensity": 0.28,
+    "renderDirectionalIntensity": 1.65,
+    "renderHemisphereIntensity": 0.4,
+    "upperPointIntensity": 12,
+    "visualScaleMeters": {"wood": [0.65, 2.4], "teak": [0.9, 3], "stone": [1.1, 1.1], "carpet": [0.65, 0.65], "fabric": [0.22, 0.22], "sisal": [0.32, 0.32], "bark": [0.4, 1.2]}
+  },
+  "confidence": "Aproximação visual ao render, não materiais medidos nem estudo fotométrico",
+  "validation": ["npm run build com verificação da baseline arquitetônica", "npm test", "npm run verify", "Comparação local de screenshots antes/depois, desktop e celular"],
+  "approvalStatus": "Alteração de aparência solicitada pelo usuário; revisão visual do agente",
+  "rollback": "Reverter o commit desta revisão; geometria e baseline arquitetônica permanecem intactas"
+}

@@ -20,9 +20,9 @@ WebGL é necessário. Chrome/Chromium foi validado; Safari, Firefox e aparelhos 
 ## Controles
 
 - **Órbita:** arraste com mouse ou toque; roda/pinça aproxima; botão direito desloca. “⌂” restaura o enquadramento geral, adaptado ao tamanho da tela.
-- **Vistas:** chegada, piazza/bar, 30 Metri, Experience, duas reuniões, decor/adega, apoio e acesso AZ58.
+- **Vistas:** Materiais (comparação com o render), chegada, piazza/bar, 30 Metri, Experience, duas reuniões, decor/adega, apoio e acesso AZ58.
 - **Caminhar:** inicia na vista escolhida, ou na chegada quando estiver na visão geral. WASD/setas deslocam; arrastar muda o olhar. Setas na tela permitem caminhar no celular. Esc retorna à órbita. A escada conecta os níveis; não há queda livre nem salto.
-- **Diurna / Fim de tarde:** estudos de luz ambiente. Não representam orientação solar ou medições do pavilhão.
+- **Render · 3000 K / Diurna / Fim de tarde:** o modo inicial aproxima a ambiência quente e o fundo escuro da referência; os demais são estudos de luz ambiente. Não representam orientação solar ou medições do pavilhão.
 - **Referências:** matriz de confiança e galeria ampliável. “Projeto REV05” mostra o conjunto; “Corte de leitura” oculta o pavimento superior e embarcações para examinar o térreo. O corte não é um segundo projeto nem cenário de obra construída.
 - **PNG:** captura somente a cena em 2560 pixels de largura, mantendo a proporção da tela, sem a interface.
 - **GLB:** exporta grupos visíveis, em metros, com materiais e texturas. Chão de contexto, luz ambiente e interface não integram o arquivo. No celular, a exportação também está em Referências.
@@ -47,6 +47,12 @@ Fonte recebida: **Espaço Fluido_Azimut SPBS 2026 REV05.pdf**, 34 páginas, auto
 
 Cotas documentadas preservadas: lote 32 × 23 m / 736 m²; 2,70 m entre pisos; 2,40 m livres e 0,30 m de estrutura; perímetro de 6,50 m no memorial; montantes de 6 m; espelho da escada 0,18 m; guarda-corpo 1,10 m; malha estrutural 2,50 m / vãos de 5 m; telão linear 15 m, curvo 3,50 m de altura; iluminação descrita de 3000 K e globos de 15 cm. Posições, espessuras e geometrias não cotadas permanecem estimadas.
 
+## Atualização de materiais
+
+Os acabamentos foram aproximados da imagem de referência enviada na conversa: madeira natural mais sóbria, teca com juntas, pedra cinza de grão fino, carpete taupe, linho marfim, sisal de trama cruzada e vidro fumê bronze. Sete conjuntos locais de mapas de cor, normal e rugosidade, com 512 × 512 px, substituem os mapas genéricos anteriores. `src/surface-mapping.js` aplica escala de textura por superfície sem alterar posições ou dimensões. Os mapas normais e de rugosidade acompanham o GLB exportado.
+
+O modo **Render · 3000 K** acrescenta fundo escuro e iluminação quente; a intensidade continua sendo ajuste visual, não cálculo fotométrico. [Abrir a vista de materiais](https://azimut-spbs-2026.vercel.app/?vista=materiais). A nova imagem foi consultada localmente e não foi incorporada à publicação nem enviada a serviços de geração. Geometria, implantação e cotas permanecem iguais à baseline.
+
 ## Limitações e confirmações necessárias
 
 1. **Mockup 30 Metri:** o memorial declara envolvente aproximada de 32 × 7 m; a planta mostra parte da largura do lote reservada à AZ58. O envelope visual adotado tem aproximadamente 26 m de extensão para preservar a implantação. Confirmar em CAD; não usar este comprimento como medida real.
@@ -69,7 +75,8 @@ Próximos refinamentos: obter CAD cotado e esclarecer o envelope 30 Metri; conci
 | `src/layout.js` | Cotas, parâmetros arquitetônicos, contornos, coordenadas, zonas, níveis, pisos navegáveis e colisões |
 | `src/geometry.js` | Caixas, cilindros, linhas tubulares, extrusões, anéis, lofts, guarda-corpos e agrupamento |
 | `src/scene.js` | Construção da arquitetura a partir do layout |
-| `src/materials.js` | Materiais PBR e mapas procedurais locais |
+| `src/materials.js` | Materiais PBR e mapas locais de cor, normal e rugosidade |
+| `src/surface-mapping.js` | Escala de texturas por UV, sem alteração de geometria |
 | `src/furniture.js` | Mobiliário esquemático e alternativa ao GLB |
 | `src/chisel-assets.js` | Importação GLB isolada; remover, substituir e restaurar |
 | `src/environment.js`, `src/sky.js` | Paisagismo e iluminação de ambiente local |
@@ -126,4 +133,4 @@ npm run verify
 
 Para distribuir offline, entregue apenas `dist/azimut-spbs.html`. Para hospedar, sirva esse mesmo arquivo em qualquer hospedagem estática; não há build no servidor, variáveis de ambiente ou endpoints. **Publicado por solicitação explícita do usuário:** [visualizador público](https://azimut-spbs-2026.vercel.app) e [código no GitHub](https://github.com/phsantana-phs/azimut-spbs-2026). O HTML contém as referências do projeto: revise autorização de distribuição antes de disponibilizá-lo a terceiros.
 
-Referências pertencem aos autores identificados no PDF. Three.js/esbuild usam licença MIT; avisos relevantes são preservados no bundle. A fonte local DejaVu Sans acompanha sua licença em `assets/fonts/LICENSE.txt`. Nenhuma imagem, medida ou identidade privada foi enviada a serviços externos durante esta implementação.
+Referências pertencem aos autores identificados no PDF. Three.js/esbuild usam licença MIT; avisos relevantes são preservados no bundle. A fonte local DejaVu Sans acompanha sua licença em `assets/fonts/LICENSE.txt`. O PDF incorporado foi publicado no GitHub e na Vercel após autorização explícita do usuário. A referência adicional de materiais foi usada somente localmente, sem envio a serviços de geração.
