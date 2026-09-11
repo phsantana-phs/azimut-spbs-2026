@@ -1,0 +1,9 @@
+{
+  "status": "baseline inicial do MVP autorizado pelo usuário; sem aprovação técnica executiva",
+  "approvalForFutureChanges": "humana obrigatória; registrar responsável, data, antes/depois e validação",
+  "sha256": {
+    "src/layout.js": "be0b7257f306313dff8c71b9fc14b319b939643f3564f5a3a81e9786ee05b023",
+    "src/scene.js": "166a7c326bfd6435a66593170934bd222a9bc43d1b8447a5b7f35b6b152869d4",
+    "src/geometry.js": "8c71d928c29ea2fb8421b1f7a8d965408fce396866b2ef389b2bc7da6aa00cb8"
+  }
+}

@@ -1,0 +1,31 @@
+import {chromium} from 'playwright';
+import assert from 'node:assert/strict';
+import {readFile,writeFile,mkdir} from 'node:fs/promises';
+import {resolve} from 'node:path';
+const browser=await chromium.launch({headless:true,args:['--no-sandbox','--enable-unsafe-swiftshader']});
+const context=await browser.newContext({viewport:{width:1440,height:960},acceptDownloads:true,offline:true});
+const page=await context.newPage(),errors=[],remote=[],checks=[];
+page.on('pageerror',e=>errors.push(e.message));page.on('request',r=>{if(/^https?:/.test(r.url()))remote.push(r.url());});
+const snapshot=()=>page.evaluate(()=>window.__AZIMUT__.snapshot());
+const check=(name,value)=>{assert.ok(value,name);checks.push(name);console.log("OK",name);};
+async function download(button,name){const event=page.waitForEvent('download',{timeout:120000});await page.click(button);const d=await event;assert.equal(await d.failure(),null);const p=resolve('validation',name);await d.saveAs(p);return readFile(p);}
+function glb(buf){assert.equal(buf.toString('utf8',0,4),'glTF');assert.equal(buf.readUInt32LE(4),2);assert.equal(buf.readUInt32LE(8),buf.length);const len=buf.readUInt32LE(12);const doc=JSON.parse(buf.toString('utf8',20,20+len));assert.ok(doc.meshes.length>0);assert.ok(!doc.buffers.some(b=>b.uri));return doc;}
+try{
+await mkdir('validation',{recursive:true});await page.goto('file://'+resolve('dist/azimut-spbs.html'));await page.waitForFunction(()=>document.body.dataset.ready==='true',null,{timeout:90000});check('HTML via file:// com rede offline',(await snapshot()).ready);check('GLB Chisel importado',(await snapshot()).assetLoaded);
+const start=(await snapshot()).camera;await page.mouse.move(650,400);await page.mouse.down();await page.mouse.move(790,440,{steps:8});await page.mouse.up();await page.waitForTimeout(400);check('Órbita por mouse',JSON.stringify(start)!==JSON.stringify((await snapshot()).camera));await page.mouse.wheel(0,-150);await page.click('#home');
+for(const id of ['arrival','piazza','mockup','experience','meeting1','meeting2','decor','service','az58']){await page.selectOption('#view',id);check('Vista '+id,(await snapshot()).view===id);}
+await page.selectOption('#view','arrival');await page.click('#walk');let before=(await snapshot()).feet;await page.keyboard.down('KeyW');await page.waitForTimeout(400);await page.keyboard.up('KeyW');check('Caminhada WASD',JSON.stringify(before)!==JSON.stringify((await snapshot()).feet));before=(await snapshot()).feet;await page.keyboard.down('ArrowDown');await page.waitForTimeout(350);await page.keyboard.up('ArrowDown');check('Caminhada setas',JSON.stringify(before)!==JSON.stringify((await snapshot()).feet));await page.keyboard.press('Escape');check('Escape retorna à órbita',!(await snapshot()).walking);
+await page.click('#evening');check('Fim de tarde',await page.getAttribute('#evening','aria-pressed')==='true');await page.click('#day');await page.click('#home');
+await page.screenshot({path:'validation/desktop.png'});
+const png=await download('#capture-button','capture.png');check('Captura PNG 2560 px',png.readUInt32BE(16)===2560&&png.subarray(1,4).toString()==='PNG');
+const fullBuffer=await download('#export-button','project.glb');const full=glb(fullBuffer);check('Exportação GLB completa',full.meshes.length>0);
+await page.click('#references');check('Painel de referências aberto',await page.locator('#reference-dialog').isVisible());check('Matriz de confiança',await page.locator('#reference-list .evidence').count()===15);
+await page.locator('summary').filter({hasText:'Consultar as 34'}).click();check('34 páginas incorporadas',await page.locator('#gallery img').count()===34);await page.locator('#gallery button').nth(26).click();check('Ampliação da planta',await page.locator('#image-dialog').isVisible());await page.click('#close-image');
+await page.selectOption('#asset-mode','none');check('Remoção isolada Chisel',(await snapshot()).assetChildren===0);await page.selectOption('#asset-mode','fallback');check('Substituição procedural',(await snapshot()).assetChildren===1);await page.selectOption('#asset-mode','glb');check('Restauração GLB',(await snapshot()).assetChildren===1);
+await page.selectOption('#scenario','cut');check('Corte de leitura',(await snapshot()).cut);await page.click('#close-references');await page.screenshot({path:'validation/cutaway.png'});const cutBuffer=await download('#export-button','cutaway.glb');const cut=glb(cutBuffer);check('GLB respeita visibilidade',cut.meshes.length<full.meshes.length&&cutBuffer.length<fullBuffer.length);
+await page.click('#references');await page.selectOption('#scenario','project');await page.click('#close-references');await page.setViewportSize({width:390,height:844});await page.click('#home');await page.waitForTimeout(500);await page.screenshot({path:'validation/mobile.png'});check('Sem rolagem horizontal móvel',await page.evaluate(()=>document.documentElement.scrollWidth===innerWidth));
+await page.selectOption('#view','arrival');await page.click('#walk');before=(await snapshot()).feet;const touch=page.locator('[data-key="KeyW"]');const rect=await touch.boundingBox(),cdp=await context.newCDPSession(page);await cdp.send('Input.dispatchTouchEvent',{type:'touchStart',touchPoints:[{x:rect.x+rect.width/2,y:rect.y+rect.height/2}]});await page.waitForTimeout(500);await cdp.send('Input.dispatchTouchEvent',{type:'touchEnd',touchPoints:[]});check('Controle móvel de caminhada',JSON.stringify(before)!==JSON.stringify((await snapshot()).feet));await page.screenshot({path:'validation/mobile-walk.png'});
+await page.click('#references');check('Exportação acessível no celular',await page.locator('#export-mobile').isVisible());await page.keyboard.press('Escape');
+check('Sem recursos HTTP/HTTPS',remote.length===0);check('Sem erros JavaScript',errors.length===0);
+await writeFile('validation/report.json',JSON.stringify({date:new Date().toISOString(),browser:'Chromium / Playwright, software WebGL, offline file://',checks,errors,remote,fullGLBBytes:fullBuffer.length,cutGLBBytes:cutBuffer.length,png:[png.readUInt32BE(16),png.readUInt32BE(20)],snapshot:await snapshot()},null,2));console.log(JSON.stringify({checks:checks.length,errors,remote,fullGLB:fullBuffer.length,cutGLB:cutBuffer.length}));
+}finally{await browser.close();}

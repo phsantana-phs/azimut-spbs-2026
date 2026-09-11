@@ -1,0 +1,38 @@
+[
+  {
+    "name": "add_cylinder",
+    "arguments": {
+      "radius": 0.28,
+      "height": 0.43,
+      "position": [
+        0,
+        0.215,
+        0
+      ],
+      "color": "#987451",
+      "name": "base"
+    }
+  },
+  {
+    "name": "add_cylinder",
+    "arguments": {
+      "radius": 0.53,
+      "height": 0.065,
+      "position": [
+        0,
+        0.45,
+        0
+      ],
+      "color": "#987451",
+      "name": "tampo"
+    }
+  },
+  {
+    "name": "union",
+    "arguments": {
+      "a": "obj1",
+      "b": "obj2",
+      "name": "mesa-auxiliar-v1"
+    }
+  }
+]

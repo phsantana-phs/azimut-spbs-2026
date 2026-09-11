@@ -1,0 +1,5 @@
+.env*
+.vercel
+public-preview
+node_modules
+dist/*.zip

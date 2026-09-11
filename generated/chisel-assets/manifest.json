@@ -1,0 +1,84 @@
+{
+  "version": 1,
+  "architectureAuthority": "src/layout.js",
+  "assets": [
+    {
+      "id": "mesa-auxiliar-v1",
+      "prompt": "Mesa de centro circular simplificada em madeira, base cilíndrica e tampo, inspirada no mobiliário dos renders. Proposta auxiliar; não alterar arquitetura.",
+      "csgParameters": [
+        {
+          "name": "add_cylinder",
+          "arguments": {
+            "radius": 0.28,
+            "height": 0.43,
+            "position": [
+              0,
+              0.215,
+              0
+            ],
+            "color": "#987451",
+            "name": "base"
+          }
+        },
+        {
+          "name": "add_cylinder",
+          "arguments": {
+            "radius": 0.53,
+            "height": 0.065,
+            "position": [
+              0,
+              0.45,
+              0
+            ],
+            "color": "#987451",
+            "name": "tampo"
+          }
+        },
+        {
+          "name": "union",
+          "arguments": {
+            "a": "obj1",
+            "b": "obj2",
+            "name": "mesa-auxiliar-v1"
+          }
+        }
+      ],
+      "file": "mesa-auxiliar-v1.glb",
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "position": [
+        21.7,
+        2.7,
+        17.8
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "fallbackMaterial": "wood",
+      "reference": "PDF 12–14, 23 e 32; sem cotas de mobiliário",
+      "dimensionsStatus": "estimado: tampo Ø1,06 m, base Ø0,56 m, altura total 0,4825 m",
+      "approvalStatus": "revisado_visual_agente; aprovação humana pendente",
+      "review": {
+        "views": [
+          "front",
+          "side",
+          "top",
+          "iso"
+        ],
+        "artifact": "mesa-auxiliar-v1-four-views.png",
+        "result": "Base centralizada, tampo contínuo, união CSG íntegra nas quatro vistas. Sem equivalência dimensional certificada."
+      },
+      "revision": {
+        "before": "ausente (grupo auxiliar vazio)",
+        "after": "mesa-auxiliar-v1.glb",
+        "rollback": "Remover no painel; restaurar GLB original; nenhuma mutação de arquitetura"
+      },
+      "parametersFile": "parameters.json"
+    }
+  ]
+}

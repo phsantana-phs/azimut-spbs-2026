@@ -1,0 +1,67 @@
+{
+  "date": "2026-09-11T13:55:09.504Z",
+  "browser": "Chromium / Playwright, software WebGL, offline file://",
+  "checks": [
+    "HTML via file:// com rede offline",
+    "GLB Chisel importado",
+    "Órbita por mouse",
+    "Vista arrival",
+    "Vista piazza",
+    "Vista mockup",
+    "Vista experience",
+    "Vista meeting1",
+    "Vista meeting2",
+    "Vista decor",
+    "Vista service",
+    "Vista az58",
+    "Caminhada WASD",
+    "Caminhada setas",
+    "Escape retorna à órbita",
+    "Fim de tarde",
+    "Captura PNG 2560 px",
+    "Exportação GLB completa",
+    "Painel de referências aberto",
+    "Matriz de confiança",
+    "34 páginas incorporadas",
+    "Ampliação da planta",
+    "Remoção isolada Chisel",
+    "Substituição procedural",
+    "Restauração GLB",
+    "Corte de leitura",
+    "GLB respeita visibilidade",
+    "Sem rolagem horizontal móvel",
+    "Controle móvel de caminhada",
+    "Exportação acessível no celular",
+    "Sem recursos HTTP/HTTPS",
+    "Sem erros JavaScript"
+  ],
+  "errors": [],
+  "remote": [],
+  "fullGLBBytes": 16326604,
+  "cutGLBBytes": 11256816,
+  "png": [
+    2560,
+    1707
+  ],
+  "snapshot": {
+    "ready": true,
+    "walking": false,
+    "camera": [
+      3.665156693380482,
+      1.8942430604017104,
+      21.16158405029908
+    ],
+    "feet": [
+      3.6654342880778263,
+      0,
+      21.16084716255704
+    ],
+    "view": "arrival",
+    "cut": false,
+    "assetLoaded": true,
+    "assetChildren": 1,
+    "drawCalls": 36,
+    "triangles": 143254,
+    "visibleModelChildren": 8
+  }
+}

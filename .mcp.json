@@ -1,0 +1,1 @@
+{"mcpServers":{"chisel":{"command":"node","args":["/home/codex/chisel/dist/server.js"],"env":{"CSG_OUTPUT_DIR":"/home/codex/azimut-spbs/generated/chisel-assets"}}}}
