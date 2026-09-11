@@ -1,0 +1,977 @@
+{
+  "id": "main-deck-layout-review-03",
+  "status": "proposta para revisão humana; não aplicada à cena",
+  "beforeCommit": "82a0779",
+  "source": {
+    "drawing": "PDF REV05, página 28 / prancha 24; planta reenviada na conversa",
+    "comparison": "Vista aérea fornecida + parâmetros atuais de src/layout.js e src/furniture.js",
+    "boundsDocumented": [
+      32,
+      23
+    ],
+    "imageCrop": {
+      "x": 658,
+      "y": 161,
+      "width": 1630,
+      "height": 1168,
+      "imageWidth": 2600,
+      "imageHeight": 1463
+    },
+    "confidence": "Contagem e disposição identificadas visualmente; coordenadas e dimensões da proposta são estimativas gráficas, não cotas executivas."
+  },
+  "current": {
+    "site": {
+      "width": 32,
+      "depth": 23,
+      "area": 736,
+      "mainDeck": 2.7,
+      "clearHeight": 2.4,
+      "slab": 0.3,
+      "perimeter": 6.5,
+      "redPost": 6,
+      "riser": 0.18,
+      "rail": 1.1,
+      "grid": 2.5,
+      "screenLength": 15,
+      "screenHeight": 3.5
+    },
+    "piazza": [
+      [
+        8,
+        7
+      ],
+      [
+        25.5,
+        7
+      ],
+      [
+        25.5,
+        14
+      ],
+      [
+        25,
+        17
+      ],
+      [
+        23,
+        19.5
+      ],
+      [
+        20,
+        20.8
+      ],
+      [
+        17,
+        20.8
+      ],
+      [
+        13,
+        20
+      ],
+      [
+        13,
+        15
+      ],
+      [
+        12,
+        12
+      ],
+      [
+        8,
+        9
+      ]
+    ],
+    "mockup": [
+      [
+        0.3,
+        3.6
+      ],
+      [
+        2,
+        2
+      ],
+      [
+        5,
+        0.65
+      ],
+      [
+        10,
+        0.25
+      ],
+      [
+        20,
+        0.25
+      ],
+      [
+        25,
+        0.65
+      ],
+      [
+        26,
+        1.4
+      ],
+      [
+        26,
+        6.3
+      ],
+      [
+        25,
+        7
+      ],
+      [
+        15,
+        7.4
+      ],
+      [
+        7,
+        7.3
+      ],
+      [
+        3,
+        6
+      ],
+      [
+        0.3,
+        3.6
+      ]
+    ],
+    "az58": [
+      [
+        26.2,
+        4
+      ],
+      [
+        31.1,
+        4
+      ],
+      [
+        31.35,
+        12
+      ],
+      [
+        31,
+        17
+      ],
+      [
+        30,
+        20.6
+      ],
+      [
+        28.7,
+        22
+      ],
+      [
+        27.4,
+        20.6
+      ],
+      [
+        26.4,
+        17
+      ],
+      [
+        26.1,
+        12
+      ]
+    ],
+    "stair": {
+      "x0": 7,
+      "x1": 13,
+      "z0": 9,
+      "z1": 20,
+      "count": 15,
+      "bow": 0.025
+    },
+    "trees": [
+      [
+        7.3,
+        0,
+        20
+      ],
+      [
+        11.5,
+        1.8,
+        13.2
+      ],
+      [
+        6.9,
+        2.7,
+        10
+      ],
+      [
+        17,
+        0,
+        21.5
+      ],
+      [
+        23.5,
+        0,
+        19.6
+      ],
+      [
+        4,
+        0,
+        10
+      ],
+      [
+        3,
+        0,
+        15
+      ]
+    ],
+    "stations": [
+      {
+        "id": "1",
+        "center": [
+          15.6,
+          9.6
+        ],
+        "rug": [
+          3.4,
+          3.4
+        ],
+        "sofas": [],
+        "chairs": [
+          [
+            15.6,
+            8.299999999999999,
+            0
+          ]
+        ],
+        "tables": [
+          [
+            15.6,
+            9.6,
+            0.55
+          ]
+        ]
+      },
+      {
+        "id": "2",
+        "center": [
+          23.1,
+          12.6
+        ],
+        "rug": [
+          3.4,
+          3.4
+        ],
+        "sofas": [],
+        "chairs": [
+          [
+            23.1,
+            11.299999999999999,
+            0
+          ]
+        ],
+        "tables": [
+          [
+            23.1,
+            12.6,
+            0.55
+          ]
+        ]
+      },
+      {
+        "id": "3",
+        "center": [
+          16,
+          17.6
+        ],
+        "rug": [
+          3.4,
+          3.4
+        ],
+        "sofas": [],
+        "chairs": [
+          [
+            16,
+            16.3,
+            0
+          ]
+        ],
+        "tables": [
+          [
+            16,
+            17.6,
+            0.55
+          ]
+        ]
+      },
+      {
+        "id": "4",
+        "center": [
+          21.7,
+          17.8
+        ],
+        "rug": [
+          3.4,
+          3.4
+        ],
+        "sofas": [],
+        "chairs": [
+          [
+            21.7,
+            16.5,
+            0
+          ]
+        ],
+        "tables": [
+          [
+            21.7,
+            17.8,
+            0.55
+          ]
+        ]
+      }
+    ],
+    "sofas": [
+      [
+        14.2,
+        9.6,
+        0
+      ],
+      [
+        17.1,
+        9.6,
+        3.141592653589793
+      ],
+      [
+        14.6,
+        17.6,
+        0
+      ],
+      [
+        23.3,
+        17.8,
+        3.141592653589793
+      ]
+    ],
+    "bar": {
+      "center": [
+        18.2,
+        13.4
+      ],
+      "outer": [
+        3.88,
+        3.28
+      ]
+    },
+    "backCounter": {
+      "center": [
+        22.5,
+        8.6
+      ],
+      "outer": [
+        2.8,
+        2.2
+      ]
+    }
+  },
+  "proposal": {
+    "stations": [
+      {
+        "id": "A",
+        "name": "Estar amplo junto à 30 Metri",
+        "center": [
+          12.2,
+          9.85
+        ],
+        "rug": [
+          6.5,
+          3.25
+        ],
+        "sofas": [
+          [
+            9.05,
+            9.95,
+            0
+          ],
+          [
+            15.2,
+            9.95,
+            3.141592653589793
+          ]
+        ],
+        "chairs": [
+          [
+            10.8,
+            8.25,
+            0
+          ],
+          [
+            11.9,
+            8.25,
+            0
+          ],
+          [
+            13.1,
+            11.4,
+            3.141592653589793
+          ],
+          [
+            14.2,
+            11.4,
+            3.141592653589793
+          ]
+        ],
+        "tables": [
+          [
+            10.95,
+            9.7,
+            0.58
+          ],
+          [
+            10.8,
+            10.4,
+            0.34
+          ],
+          [
+            13.45,
+            10.15,
+            0.55
+          ],
+          [
+            13.6,
+            9.55,
+            0.34
+          ]
+        ]
+      },
+      {
+        "id": "B",
+        "name": "Estar menor junto à cozinha de apoio",
+        "center": [
+          19.05,
+          10.2
+        ],
+        "rug": [
+          2.5,
+          3.05
+        ],
+        "sofas": [],
+        "chairs": [
+          [
+            18.4,
+            9.05,
+            0
+          ],
+          [
+            19.5,
+            9.05,
+            0
+          ],
+          [
+            20.4,
+            10.05,
+            -1.5707963267948966
+          ]
+        ],
+        "tables": [
+          [
+            18.65,
+            10.5,
+            0.5
+          ],
+          [
+            18.95,
+            11.08,
+            0.3
+          ]
+        ]
+      },
+      {
+        "id": "C",
+        "name": "Estar lateral junto à AZ58",
+        "center": [
+          22.3,
+          14.05
+        ],
+        "rug": [
+          2.5,
+          3.35
+        ],
+        "sofas": [],
+        "chairs": [
+          [
+            23.65,
+            12.95,
+            -1.5707963267948966
+          ],
+          [
+            23.65,
+            14.05,
+            -1.5707963267948966
+          ],
+          [
+            21.55,
+            15.45,
+            3.141592653589793
+          ],
+          [
+            22.65,
+            15.45,
+            3.141592653589793
+          ]
+        ],
+        "tables": [
+          [
+            22,
+            14,
+            0.54
+          ],
+          [
+            22.35,
+            13.35,
+            0.32
+          ]
+        ]
+      },
+      {
+        "id": "D",
+        "name": "Estar frontal à esquerda",
+        "center": [
+          15.6,
+          18.1
+        ],
+        "rug": [
+          2.5,
+          3
+        ],
+        "sofas": [
+          [
+            17.05,
+            18.05,
+            3.141592653589793
+          ]
+        ],
+        "chairs": [
+          [
+            15,
+            19.75,
+            3.141592653589793
+          ],
+          [
+            16.1,
+            19.75,
+            3.141592653589793
+          ]
+        ],
+        "tables": [
+          [
+            15.35,
+            18.35,
+            0.51
+          ],
+          [
+            15.6,
+            17.72,
+            0.3
+          ]
+        ]
+      },
+      {
+        "id": "E",
+        "name": "Estar frontal à direita",
+        "center": [
+          19.65,
+          18.1
+        ],
+        "rug": [
+          3,
+          3
+        ],
+        "sofas": [
+          [
+            18.45,
+            18.05,
+            0
+          ]
+        ],
+        "chairs": [
+          [
+            19.5,
+            16.5,
+            0
+          ],
+          [
+            20.6,
+            16.5,
+            0
+          ]
+        ],
+        "tables": [
+          [
+            20.1,
+            18.4,
+            0.51
+          ],
+          [
+            20.3,
+            17.8,
+            0.3
+          ]
+        ]
+      }
+    ],
+    "bar": {
+      "center": [
+        16.95,
+        13.9
+      ],
+      "outer": [
+        5.15,
+        3.1
+      ],
+      "shape": "lente / orgânico; raios e abertura de serviço a confirmar"
+    },
+    "backCounter": {
+      "center": [
+        22.6,
+        8.9
+      ],
+      "outer": [
+        2.9,
+        3
+      ]
+    },
+    "piazza": [
+      [
+        8,
+        7
+      ],
+      [
+        25.7,
+        7
+      ],
+      [
+        25.7,
+        12
+      ],
+      [
+        25,
+        17
+      ],
+      [
+        23.4,
+        19.6
+      ],
+      [
+        21,
+        20.8
+      ],
+      [
+        18.5,
+        21
+      ],
+      [
+        15,
+        20.1
+      ],
+      [
+        13.2,
+        20.5
+      ],
+      [
+        12.8,
+        17
+      ],
+      [
+        11.8,
+        14.3
+      ],
+      [
+        9.4,
+        12
+      ],
+      [
+        7.3,
+        10.3
+      ]
+    ],
+    "stairOutline": [
+      [
+        7.3,
+        10.3
+      ],
+      [
+        9.4,
+        12
+      ],
+      [
+        11.8,
+        14.3
+      ],
+      [
+        12.8,
+        17
+      ],
+      [
+        13.2,
+        20.5
+      ],
+      [
+        8.1,
+        21
+      ],
+      [
+        7.1,
+        18.6
+      ],
+      [
+        5.6,
+        16.8
+      ],
+      [
+        6.8,
+        14
+      ],
+      [
+        7.4,
+        12
+      ]
+    ],
+    "ellipsePlanter": {
+      "center": [
+        5.8,
+        13
+      ],
+      "radii": [
+        1.45,
+        3.5
+      ]
+    },
+    "stairPots": [
+      [
+        8,
+        20.4
+      ],
+      [
+        10.2,
+        15.7
+      ]
+    ],
+    "frontGarden": [
+      [
+        8,
+        21.5
+      ],
+      [
+        24.6,
+        21.5
+      ],
+      [
+        24.6,
+        16.7
+      ],
+      [
+        23.9,
+        18.4
+      ],
+      [
+        22.2,
+        20
+      ],
+      [
+        20.4,
+        20.8
+      ],
+      [
+        18.5,
+        20.9
+      ],
+      [
+        15,
+        20.1
+      ],
+      [
+        12.7,
+        20.4
+      ],
+      [
+        10.2,
+        21.1
+      ]
+    ],
+    "connections": [
+      {
+        "id": "upper-deck",
+        "center": [
+          16.85,
+          7.6
+        ],
+        "name": "Degraus curvos de ligação ao upper deck"
+      },
+      {
+        "id": "service-stair",
+        "center": [
+          24.85,
+          8.6
+        ],
+        "name": "Escada helicoidal de apoio"
+      },
+      {
+        "id": "public-access",
+        "center": [
+          28.7,
+          1.7
+        ],
+        "name": "Acesso público AZ58 com mudanças de nível"
+      }
+    ],
+    "looseSeats": [
+      [
+        1.1,
+        7.1
+      ],
+      [
+        2.8,
+        7.1
+      ],
+      [
+        0.7,
+        8.1
+      ],
+      [
+        2.8,
+        8.1
+      ],
+      [
+        1.1,
+        12
+      ],
+      [
+        2.8,
+        12
+      ],
+      [
+        0.7,
+        13.4
+      ],
+      [
+        2.8,
+        13.4
+      ]
+    ]
+  },
+  "findings": [
+    {
+      "id": "01",
+      "severity": "Alta",
+      "element": "Número e hierarquia das estações",
+      "source": "Cinco tapetes: um estar amplo, dois estar menores ao norte/leste e dois frontais.",
+      "current": "Quatro tapetes quadrados iguais; falta a estação B.",
+      "action": "Representar cinco conjuntos com tamanhos e composições próprios.",
+      "confidence": "Alta para contagem; média para medidas."
+    },
+    {
+      "id": "02",
+      "severity": "Alta",
+      "element": "Estação A / encontro com a escada",
+      "source": "Estar amplo transversal junto à 30 Metri, com dois sofás opostos e assentos complementares.",
+      "current": "Tapete estreito e deslocado à direita. O limite da escada/piso invade a faixa necessária à estação da planta.",
+      "action": "Alargar e deslocar o estar para a esquerda, após corrigir o encontro piazza–escada.",
+      "confidence": "Alta para divergência de disposição; contorno proposto estimado."
+    },
+    {
+      "id": "03",
+      "severity": "Alta",
+      "element": "Bar central",
+      "source": "Balcão em lente, mais largo no sentido X, centrado na composição da piazza.",
+      "current": "Anel quase elíptico de 3,88 × 3,28 m no modelo, centro [18,2; 13,4].",
+      "action": "Propor envelope de cerca de 5,15 × 3,10 m e centro [16,95; 13,90]. Deslocamento proposto: 1,25 m à esquerda e 0,50 m para a frente. Não são cotas do projeto.",
+      "confidence": "Média; medidas da proposta estimadas."
+    },
+    {
+      "id": "04",
+      "severity": "Alta",
+      "element": "Estações D e E / orientação dos sofás",
+      "source": "Sofás nas bordas internas dos dois conjuntos frontais, próximos entre si; assentos voltados para cada tapete.",
+      "current": "Sofás nas extremidades externas, afastados, com composição invertida.",
+      "action": "Trazer os sofás para o miolo e reposicionar cadeiras e mesas em pares.",
+      "confidence": "Alta para orientação; média para coordenadas."
+    },
+    {
+      "id": "05",
+      "severity": "Média",
+      "element": "Estação C junto à AZ58",
+      "source": "Tapete retangular orientado no sentido longitudinal da AZ58, com assentos na lateral e na frente.",
+      "current": "Quadrado deslocado para trás/direita, mesa central e apenas uma cadeira.",
+      "action": "Alongar o tapete, deslocar o conjunto à esquerda/frente e completar os assentos da planta.",
+      "confidence": "Alta para arranjo; medidas estimadas."
+    },
+    {
+      "id": "06",
+      "severity": "Média",
+      "element": "Mesas e poltronas complementares",
+      "source": "Símbolos indicam composições de mesas menores combinadas e vários assentos em torno dos tapetes.",
+      "current": "Repetição de mesa circular, pufe e uma cadeira por tapete.",
+      "action": "Propor 4 sofás, aproximadamente 15 assentos individuais e 12 volumes de mesas auxiliares nos cinco conjuntos; validar tipologias e quantitativos no executivo.",
+      "confidence": "Média; leitura de símbolos, não lista de compra."
+    },
+    {
+      "id": "07",
+      "severity": "Alta",
+      "element": "Escadaria e canteiro elíptico",
+      "source": "Escadaria em leque contorna canteiro longitudinal; dois vasos grandes marcam o percurso.",
+      "current": "Faixa de degraus quase regular; o canteiro elíptico não foi modelado e há vasos/árvores em posições distintas.",
+      "action": "Rever desenho do leque, patamares, bordas e canteiro em uma alteração arquitetônica conjunta.",
+      "confidence": "Alta para divergência; geometria deve ser aprovada."
+    },
+    {
+      "id": "08",
+      "severity": "Alta",
+      "element": "Borda frontal da piazza e jardim",
+      "source": "Jardim acompanha a borda curva e sobe pela lateral direita; começa próximo ao pé da escada.",
+      "current": "Canteiro frontal retilíneo e curto; faixa esquerda ausente e canto direito simplificado.",
+      "action": "Reconstruir contorno curvo e continuidade do jardim, sem inventar cotas executivas.",
+      "confidence": "Alta para forma relativa; contornos estimados."
+    },
+    {
+      "id": "09",
+      "severity": "Alta",
+      "element": "Conexões verticais",
+      "source": "Degraus curvos no acesso à 30 Metri, escada helicoidal no apoio e acesso AZ58 com mudanças de nível.",
+      "current": "Conexões omitidas ou simplificadas em plataforma plana.",
+      "action": "Rever em conjunto com cortes e cotas. Não basta adicionar degraus decorativos sem compatibilizar os níveis.",
+      "confidence": "Alta para presença; níveis locais a confirmar."
+    },
+    {
+      "id": "10",
+      "severity": "Média",
+      "element": "Apoio externo lateral",
+      "source": "Há dois pequenos agrupamentos de símbolos de assentos à esquerda, fora da piazza.",
+      "current": "Esse setor aparece principalmente com árvores isoladas.",
+      "action": "Revisar assentos e retirar árvores não sustentadas pela planta; confirmar as peças antes de detalhar.",
+      "confidence": "Média; símbolos e intenção devem ser confirmados."
+    },
+    {
+      "id": "11",
+      "severity": "Baixa",
+      "element": "Balcão de apoio / cozinha",
+      "source": "Balcão em C no quadrante superior direito.",
+      "current": "Posição geral próxima, mas proporção comprimida no sentido Z.",
+      "action": "Manter o setor e ajustar a proporção do C; conferir relação com a escada helicoidal.",
+      "confidence": "Média."
+    },
+    {
+      "id": "12",
+      "severity": "Mantido",
+      "element": "Implantação geral das embarcações",
+      "source": "30 Metri transversal ao fundo, AZ58 longitudinal à direita.",
+      "current": "A relação de implantação principal está próxima; casarias e mobiliário naval continuam esquemáticos.",
+      "action": "Preservar implantação nesta revisão. Não confundir simplificação dos barcos com erro dos cinco setores de estar.",
+      "confidence": "Alta para relação de implantação; formas navais simplificadas."
+    }
+  ],
+  "approvalRequired": {
+    "reason": "Instrução inicial do usuário exige aprovação humana para geometria arquitetônica e implantação.",
+    "scope": [
+      "Contorno da piazza junto à estação A",
+      "Escadaria em leque e patamares",
+      "Canteiro elíptico e jardim frontal/lateral",
+      "Conexões verticais e níveis locais"
+    ],
+    "notApplied": true
+  },
+  "rollback": "A cena publicada permanece no commit 82a0779. Esta revisão é um documento comparativo, não alteração arquitetônica."
+}

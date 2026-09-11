@@ -1,1 +1,20 @@
-{"name":"azimut-spbs-visualizador","version":"1.0.0","private":true,"type":"module","scripts":{"build":"node build.mjs","test":"node scripts/test-layout.mjs","verify":"node scripts/verify.mjs"},"dependencies":{"three":"0.184.0"},"devDependencies":{"esbuild":"0.25.12","playwright":"1.55.1","@modelcontextprotocol/sdk":"1.29.0"}}
+{
+  "name": "azimut-spbs-visualizador",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "node build.mjs",
+    "test": "node scripts/test-layout.mjs",
+    "verify": "node scripts/verify.mjs",
+    "build:review": "node scripts/build-layout-review.mjs"
+  },
+  "dependencies": {
+    "three": "0.184.0"
+  },
+  "devDependencies": {
+    "esbuild": "0.25.12",
+    "playwright": "1.55.1",
+    "@modelcontextprotocol/sdk": "1.29.0"
+  }
+}

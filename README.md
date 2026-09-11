@@ -134,3 +134,14 @@ npm run verify
 Para distribuir offline, entregue apenas `dist/azimut-spbs.html`. Para hospedar, sirva esse mesmo arquivo em qualquer hospedagem estática; não há build no servidor, variáveis de ambiente ou endpoints. **Publicado por solicitação explícita do usuário:** [visualizador público](https://azimut-spbs-2026.vercel.app) e [código no GitHub](https://github.com/phsantana-phs/azimut-spbs-2026). O HTML contém as referências do projeto: revise autorização de distribuição antes de disponibilizá-lo a terceiros.
 
 Referências pertencem aos autores identificados no PDF. Three.js/esbuild usam licença MIT; avisos relevantes são preservados no bundle. A fonte local DejaVu Sans acompanha sua licença em `assets/fonts/LICENSE.txt`. O PDF incorporado foi publicado no GitHub e na Vercel após autorização explícita do usuário. A referência adicional de materiais foi usada somente localmente, sem envio a serviços de geração.
+
+
+## Revisão detalhada de layout e mobiliário
+
+[Comparação visual e proposta](https://azimut-spbs-2026.vercel.app/revisao-layout.html) · [Vista aérea do modelo atual](https://azimut-spbs-2026.vercel.app/?vista=planta).
+
+A planta mostra cinco estações de estar, enquanto o modelo tem quatro. Foram revisados doze pontos: hierarquia dos conjuntos, estação ampla, estação ausente, bar em lente, orientação dos sofás frontais, assentos/mesas complementares, escadaria, canteiro elíptico, jardim frontal, conexões verticais, apoio externo e balcão de cozinha.
+
+`generated/layout-review/proposal.json` distingue parâmetros atuais de coordenadas propostas estimadas. `dist/revisao-layout.html` compara a planta do PDF, captura aérea atual e diagramas; permite sobrepor o atual ou a proposta ao desenho. Reproduzir com `npm run build:review`.
+
+**A proposta não foi aplicada à cena.** O encaixe da estação ampla depende de corrigir o encontro entre piso e escadaria. Contorno da piazza, escada, canteiros e conexões verticais permanecem pendentes de aprovação humana, conforme a restrição inicial do projeto. Não foram alterados mobiliário, implantação ou baseline arquitetônica nesta etapa de revisão. A nova vista aérea é somente um recurso de câmera.
