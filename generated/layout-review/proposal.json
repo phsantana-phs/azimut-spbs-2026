@@ -1,6 +1,6 @@
 {
   "id": "main-deck-layout-review-03",
-  "status": "proposta para revisão humana; não aplicada à cena",
+  "status": "aprovada pelo usuário e aplicada à reconstrução; conexões navais locais e helicoidal permanecem simplificadas",
   "beforeCommit": "82a0779",
   "source": {
     "drawing": "PDF REV05, página 28 / prancha 24; planta reenviada na conversa",
@@ -971,7 +971,13 @@
       "Canteiro elíptico e jardim frontal/lateral",
       "Conexões verticais e níveis locais"
     ],
-    "notApplied": true
+    "notApplied": false
   },
-  "rollback": "A cena publicada permanece no commit 82a0779. Esta revisão é um documento comparativo, não alteração arquitetônica."
+  "rollback": "Estado anterior preservado no commit 80de359 e em validation/layout-approved/before; modelo anterior em generated/layout-review/model-before.png",
+  "approval": {
+    "quote": "aprovo",
+    "by": "usuário da conversa",
+    "date": "2026-09-11",
+    "record": "validation/layout-approved/approval.json"
+  }
 }

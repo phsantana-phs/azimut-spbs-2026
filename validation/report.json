@@ -1,5 +1,5 @@
 {
-  "date": "2026-09-11T14:50:24.462Z",
+  "date": "2026-09-11T16:44:39.322Z",
   "browser": "Chromium / Playwright, software WebGL, offline file://",
   "checks": [
     "HTML via file:// com rede offline",
@@ -41,8 +41,8 @@
   ],
   "errors": [],
   "remote": [],
-  "fullGLBBytes": 21926564,
-  "cutGLBBytes": 16339700,
+  "fullGLBBytes": 21557724,
+  "cutGLBBytes": 16173440,
   "png": [
     2560,
     1707
@@ -51,21 +51,21 @@
     "ready": true,
     "walking": false,
     "camera": [
-      3.615111834218771,
+      3.61491441855343,
       1.8942430604017102,
-      21.29443040371017
+      21.294954452567257
     ],
     "feet": [
-      3.6153894289161155,
+      3.615192013250774,
       0,
-      21.29369351596813
+      21.294217564825217
     ],
     "view": "arrival",
     "cut": false,
     "assetLoaded": true,
     "assetChildren": 1,
-    "drawCalls": 35,
-    "triangles": 143254,
+    "drawCalls": 39,
+    "triangles": 160674,
     "visibleModelChildren": 8
   }
 }

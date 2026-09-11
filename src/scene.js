@@ -1,4 +1,4 @@
-import {layout as L,confirmed as C,architectural as A} from './layout.js';
+import {layout as L,confirmed as C,architectural as A,stairPoint} from './layout.js';
 import {group,box,line,extrude,rail,loft} from './geometry.js';
 export function architecture(root,m){const lower=group('Lower Deck — implantação estimada',root),upper=group('Main Deck — contornos estimados',root),boats=group('Embarcações — volumes de referência',root);
 box([C.width/2,-.13,C.depth/2],[C.width,.26,C.depth],m.floor,lower);
@@ -6,7 +6,7 @@ for(const w of L.walls){const [x,z,sx,sz,h]=w;box([x,h/2,z],[sx,h,sz],h>3?m.wall
 for(const [x,z]of L.columns)box([x,C.clearHeight/2,z],[.13,C.clearHeight,.13],m.dark,lower);
 for(const b of A.beams)box(b.p,b.s,m.dark,lower);
 extrude(L.piazza,C.clearHeight,C.slab,m.floor,upper);
-const s=L.stair;for(let i=0;i<s.count;i++){const a=s.z1-i*(s.z1-s.z0)/s.count,b=s.z1-(i+1)*(s.z1-s.z0)/s.count,p=[];for(let j=0;j<=20;j++){let x=s.x0+(s.x1-s.x0)*j/20;p.push([x,a+s.bow*(x-10)**2]);}for(let j=20;j>=0;j--){let x=s.x0+(s.x1-s.x0)*j/20;p.push([x,b+s.bow*(x-10)**2]);}extrude(p,0,(i+1)*C.riser,m.stone,upper);line(p.slice(0,21).map(p=>[p[0],(i+1)*C.riser-.035,p[1]+.015]),m.light,upper,.022);}
+const s=L.stair;for(let i=0;i<s.count;i++){const t=i/s.count,u=(i+1)/s.count,p=[stairPoint(t,0),stairPoint(t,1),stairPoint(u,1),stairPoint(u,0)],h=(s.count-i)*C.riser;extrude(p,0,h,m.stone,upper);line([stairPoint(u,0),stairPoint(u,1)].map(p=>[p[0],h-.025,p[1]]),m.light,upper,.018);}
 for(const r of A.rails)rail(r.p,r.y,m.metal,r.layer==='lower'?lower:upper);
 for(const p of A.posts)box(p.p,p.s,m.red,lower);box(A.access.p,A.access.s,m.teak,upper);
 const v=A.mockup;loft(L.mockup,v.layers,m.white,boats);extrude(L.mockup,v.deckY,v.deckThickness,m.teak,upper);line(L.mockup.map(p=>[p[0],v.rimY,p[1]]),m.white,boats,v.rimRadius);loft(v.cabin,v.cabinLayers,m.glass,boats);extrude(v.cabin,v.roofY,v.roofThickness,m.white,boats);for(const b of v.boxes)box(b.p,b.s,m[b.m],boats);

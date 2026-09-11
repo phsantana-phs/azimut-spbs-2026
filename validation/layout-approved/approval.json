@@ -1,0 +1,20 @@
+{
+  "date": "2026-09-11",
+  "approvedBy": "Usuário desta conversa",
+  "approval": "aprovo",
+  "scope": "Aplicar proposta main-deck-layout-review-03: piazza, escadaria, canteiros, mobiliário A–E e revisão de circulação",
+  "beforeCommit": "80de359",
+  "before": "validation/layout-approved/before",
+  "parameters": "generated/layout-review/proposal.json",
+  "limits": "Aprovação de reconstrução visual, não validação executiva de medidas estimadas. Conexões navais locais e escada helicoidal permanecem simplificadas: cortes não definem integralmente cotas/aberturas/percurso. Implantação e volumes das embarcações preservados.",
+  "sha256": {
+    "src/layout.js": "ad09e2ad5cebf64530248681d78f1c93a2310cb1eefaceab13f292eef936049a",
+    "src/scene.js": "ce4c53a685b2189c6965bf2f4abff99b16673bf93f459c4ac33429965a2c576d",
+    "src/geometry.js": "8c71d928c29ea2fb8421b1f7a8d965408fce396866b2ef389b2bc7da6aa00cb8"
+  },
+  "validationAdjustments": [
+    "Sofá A oeste deslocado +0,10 m em X para manter todos os cantos dentro do piso; coordenada final X=9,15 m estimada.",
+    "Vaso central assentado na superfície da escada em Y=1,17338 m calculado, não cota documental.",
+    "Mesas pequenas em altura menor para evitar interseção dos tampos."
+  ]
+}

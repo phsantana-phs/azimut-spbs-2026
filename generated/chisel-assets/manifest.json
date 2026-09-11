@@ -50,9 +50,9 @@
         1
       ],
       "position": [
-        21.7,
+        20.1,
         2.7,
-        17.8
+        18.4
       ],
       "rotation": [
         0,
@@ -78,7 +78,20 @@
         "after": "mesa-auxiliar-v1.glb",
         "rollback": "Remover no painel; restaurar GLB original; nenhuma mutação de arquitetura"
       },
-      "parametersFile": "parameters.json"
+      "parametersFile": "parameters.json",
+      "placementRevision": {
+        "before": [
+          21.7,
+          2.7,
+          17.8
+        ],
+        "after": [
+          20.1,
+          2.7,
+          18.4
+        ],
+        "approval": "Usuário: aprovo; revisão A–E; 2026-09-11; aprovação da implantação, sem certificação dimensional"
+      }
     }
   ]
 }
